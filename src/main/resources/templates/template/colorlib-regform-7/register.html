@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up Form by Colorlib</title>
+
+     <!-- Font Icon -->
+    <link
+     rel="stylesheet"
+     th:href="@{/login/fonts/material-icon/css/material-design-iconic-font.min.css}"
+    />
+
+    <!-- Main css -->
+    <link rel="stylesheet" th:href="@{/login/css/login.css}" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Sign up form -->
+      <section class="signup">
+        <div class="container">
+          <div class="signup-content">
+            <div class="signup-form">
+              <h2 class="form-title">Sign up</h2>
+              <form method="POST" class="register-form" th:object=${account} id="register-form" th:action=@{/register}>
+                <div class="form-group">
+                  <label for="name"
+                    ><i class="zmdi zmdi-account material-icons-name"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="fullname"
+                    id="name"
+                    placeholder="Fullname"
+                  />
+                  <span th:if="${#fields.hasErrors('fullname')}">
+					<span th:errors="*{fullname}" style="color: red; font-size: 16px; margin-top: 20px;"></span>
+				  </span>
+                </div>
+                <div class="form-group">
+                  <label for="name"
+                    ><i class="zmdi zmdi-account material-icons-name"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="username"
+                    id="name"
+                    placeholder="Username"
+                  />
+                  <span th:if="${#fields.hasErrors('username')}">
+					<span th:errors="*{username}" style="color: red; font-size: 16px; margin-top: 20px;"></span>
+				  </span>
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="zmdi zmdi-email"></i></label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                  <span th:if="${#fields.hasErrors('email')}">
+					<span th:errors="*{email}" style="color: red; font-size: 16px; margin-top: 20px;"></span>
+				  </span>
+                </div>
+                <div class="form-group">
+                  <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="password"
+                    name="passwords"
+                    id="pass"
+                    placeholder="Password"
+                  />
+                  <span th:if="${#fields.hasErrors('passwords')}">
+					<span th:errors="*{passwords}" style="color: red; font-size: 16px; margin-top: 20px;"></span>
+				  </span>
+                </div>
+                <div class="form-group">
+                  <label for="re-pass"
+                    ><i class="zmdi zmdi-lock-outline"></i
+                  ></label>
+                  <input
+                    type="password"
+                    name="re_pass"
+                    id="re_pass"
+                    placeholder="Repeat password"
+                  />
+                  <span th:text=${errorPass}></span>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    name="agree-term"
+                    id="agree-term"
+                    class="agree-term"
+                  />
+                </div>
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signup"
+                    id="signup"
+                    class="form-submit"
+                    value="Register"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="signup-image">
+              <figure>
+                <img
+                  style="margin-top: -50px"
+                  th:src="@{/login/images/73ec395631d50cd9a4b8b2f9729a9c7e-removebg-preview.png}"
+                  alt="sing up image"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JS -->
+    <script th:src="@{/login/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/login/js/main.js}"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

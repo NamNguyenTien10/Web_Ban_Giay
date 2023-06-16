@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="favicon.png" rel="icon" />
+    <meta name="author" content="Nghia Minh Luong" />
+    <meta name="keywords" content="Default Description" />
+    <meta name="description" content="Default keyword" />
+    <title>Sky - Product Detail</title>
+    <!-- Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/plugins/font-awesome/css/font-awesome.min.css}"
+    />
+    <link rel="stylesheet" th:href="@{/plugins/ps-icon/style.css}" />
+    <!-- CSS Library-->
+    <link
+      rel="stylesheet"
+      th:href="@{/plugins/bootstrap/dist/css/bootstrap.min.css}"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/plugins/owl-carousel/assets/owl.carousel.css}"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css}"
+    />
+    <link rel="stylesheet" th:href="@{/plugins/slick/slick/slick.css}" />
+    <link
+      rel="stylesheet"
+      th:href="@{/plugins/bootstrap-select/dist/css/bootstrap-select.min.css}"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/plugins/Magnific-Popup/dist/magnific-popup.css}"
+    />
+    <link rel="stylesheet" th:href="@{/plugins/jquery-ui/jquery-ui.min.css}" />
+    <link rel="stylesheet" th:href="@{/plugins/revolution/css/settings.css}" />
+    <link rel="stylesheet" th:href="@{/plugins/revolution/css/layers.css}" />
+    <link rel="stylesheet" th:href="@{/plugins/revolution/css/navigation.css}" />
+    <!-- Custom-->
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--[if lt IE 9
+      ]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script
+    ><![endif]-->
+  </head>
+  <!--[if IE 7]><body class="ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+  <!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
+  <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
+  <body class="ps-loading">
+    <div class="header--sidebar"></div>
+    <div th:replace="~{template/header :: header}"></div> 
+    <div class="header-services">
+      <div
+        class="ps-services owl-slider"
+        data-owl-auto="true"
+        data-owl-loop="true"
+        data-owl-speed="7000"
+        data-owl-gap="0"
+        data-owl-nav="true"
+        data-owl-dots="false"
+        data-owl-item="1"
+        data-owl-item-xs="1"
+        data-owl-item-sm="1"
+        data-owl-item-md="1"
+        data-owl-item-lg="1"
+        data-owl-duration="1000"
+        data-owl-mousedrag="on"
+      >
+        <p class="ps-service">
+          <i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get
+          free standard delivery on every order with Sky Store
+        </p>
+        <p class="ps-service">
+          <i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get
+          free standard delivery on every order with Sky Store
+        </p>
+        <p class="ps-service">
+          <i class="ps-icon-delivery"></i><strong>Free delivery</strong>: Get
+          free standard delivery on every order with Sky Store
+        </p>
+      </div>
+    </div>
+    <main class="ps-main">
+      <div class="test">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-product--detail pt-60">
+        <div class="ps-container">
+          <div class="row">
+            <div class="col-lg-10 col-md-12 col-lg-offset-1">
+              <div class="ps-product__thumbnail">
+                <div class="ps-product__image" style="width: 1000px">
+                  <div class="item">
+                    <img
+                      class="zoom"
+                      th:src="${detail.image}"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="ps-product__thumbnail--mobile">
+                <div class="ps-product__main-img">
+                  <img src="images/shoe-detail/1.jpg" alt="" />
+                </div>
+                <div
+                  class="ps-product__preview owl-slider"
+                  data-owl-auto="true"
+                  data-owl-loop="true"
+                  data-owl-speed="5000"
+                  data-owl-gap="20"
+                  data-owl-nav="true"
+                  data-owl-dots="false"
+                  data-owl-item="3"
+                  data-owl-item-xs="3"
+                  data-owl-item-sm="3"
+                  data-owl-item-md="3"
+                  data-owl-item-lg="3"
+                  data-owl-duration="1000"
+                  data-owl-mousedrag="on"
+                >
+                  <img src="images/shoe-detail/1.jpg" alt="" /><img
+                    src="images/shoe-detail/2.jpg"
+                    alt=""
+                  /><img src="images/shoe-detail/3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="ps-product__info">
+               
+                <h1><span th:text=${detail.name}></span></h1>
+                <p class="ps-product__category">
+                  <a href="#"> Men shoes</a>,<a href="#"> Nike</a>,<a href="#">
+                    Jordan</a
+                  >
+                </p>
+                <h3 class="ps-product__price"><span th:text="${detail.price} + ' $'"></span> <del>120 $</del></h3>
+                <div class="ps-product__block ps-product__quickview">
+                  <h4>QUICK REVIEW</h4>
+                  <p>
+                    The Nike Free RN 2017 Men's Running Sky weighs less than
+                    previous versions and features an updated knit material…
+                  </p>
+                </div>
+                <div class="ps-product__block ps-product__size">
+                  <h4>CHOOSE SIZE<a href="#">Size chart</a></h4>
+                  <select class="ps-select selectpicker" name = >
+                    <th:block th:each="size : ${listSize}">
+						<option th:value="${size.size}">
+							<span th:text="${size.size}"></span> 
+						</option>
+					</th:block>
+                  </select>
+                  <div class="form-group">
+                    <input class="form-control" type="number" value="1" />
+                  </div>
+                </div>
+                
+                <!-- ADD TO CART -->
+                <div class="ps-product__shopping">
+	                <a class="ps-btn mb-10" th:href="@{'/addToCart/' + ${id}}">
+	                  	Add to cart<i class="ps-icon-next"></i>
+	                </a>
+                  <div class="ps-product__actions">
+                    <a class="mr-10" href="whishlist.html"
+                      ><i class="ps-icon-heart"></i></a
+                    ><a href="compare.html"><i class="ps-icon-share"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="ps-product__content mt-50">
+                <ul class="tab-list" role="tablist">
+                  <li class="active">
+                    <a
+                      href="#tab_01"
+                      aria-controls="tab_01"
+                      role="tab"
+                      data-toggle="tab"
+                      >Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#tab_02"
+                      aria-controls="tab_02"
+                      role="tab"
+                      data-toggle="tab"
+                      >Review</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#tab_03"
+                      aria-controls="tab_03"
+                      role="tab"
+                      data-toggle="tab"
+                      >PRODUCT TAG</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#tab_04"
+                      aria-controls="tab_04"
+                      role="tab"
+                      data-toggle="tab"
+                      >ADDITIONAL</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content mb-60">
+                <div class="tab-pane active" role="tabpanel" id="tab_01">
+                  <p>
+                    Caramels tootsie roll carrot cake sugar plum. Sweet roll
+                    jelly bear claw liquorice. Gingerbread lollipop dragée cake.
+                    Pie topping jelly-o. Fruitcake dragée candy canes tootsie
+                    roll. Pastry jelly-o cupcake. Bonbon brownie soufflé muffin.
+                  </p>
+                  <p>
+                    Sweet roll soufflé oat cake apple pie croissant. Pie gummi
+                    bears jujubes cake lemon drops gummi bears croissant
+                    macaroon pie. Fruitcake tootsie roll chocolate cake Carrot
+                    cake cake bear claw jujubes topping cake apple pie. Jujubes
+                    gummi bears soufflé candy canes topping gummi bears cake
+                    soufflé cake. Cotton candy soufflé sugar plum pastry sweet
+                    roll..
+                  </p>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab_02">
+                  <p class="mb-20">
+                    1 review for <strong>Shoes Air Jordan</strong>
+                  </p>
+                  <div class="ps-review">
+                    <div class="ps-review__thumbnail">
+                      <img src="images/user/1.jpg" alt="" />
+                    </div>
+                    <div class="ps-review__content">
+                      <header>
+                        <select class="ps-rating">
+                          <option value="1">1</option>
+                          <option value="1">2</option>
+                          <option value="1">3</option>
+                          <option value="1">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <p>
+                          By<a href=""> Alena Studio</a> - November 25, 2017
+                        </p>
+                      </header>
+                      <p>
+                        Soufflé danish gummi bears tart. Pie wafer icing.
+                        Gummies jelly beans powder. Chocolate bar pudding
+                        macaroon candy canes chocolate apple pie chocolate cake.
+                        Sweet caramels sesame snaps halvah bear claw wafer.
+                        Sweet roll soufflé muffin topping muffin brownie. Tart
+                        bear claw cake tiramisu chocolate bar gummies dragée
+                        lemon drops brownie.
+                      </p>
+                    </div>
+                  </div>
+                  <form
+                    class="ps-product__review"
+                    action="_action"
+                    method="post"
+                  >
+                    <h4>ADD YOUR REVIEW</h4>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label>Name:<span>*</span></label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label>Email:<span>*</span></label>
+                          <input
+                            class="form-control"
+                            type="email"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label>Your rating<span></span></label>
+                          <select class="ps-rating">
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label>Your Review:</label>
+                          <textarea class="form-control" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <button class="ps-btn ps-btn--sm">
+                            Submit<i class="ps-icon-next"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab_03">
+                  <p>Add your tag <span> *</span></p>
+                  <form class="ps-product__tags" action="_action" method="post">
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="" />
+                      <button class="ps-btn ps-btn--sm">Add Tags</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab_04">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      rows="6"
+                      placeholder="Enter your addition here..."
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="ps-btn" type="button">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-section ps-section--top-sales ps-owl-root pt-40 pb-80">
+        <div class="ps-container">
+          <div class="ps-section__header mb-50">
+            <div class="row">
+              <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <h3 class="ps-section__title" data-mask="Related item">
+                  - YOU MIGHT ALSO LIKE
+                </h3>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="ps-owl-actions">
+                  <a class="ps-prev" href="#"
+                    ><i class="ps-icon-arrow-right"></i>Prev</a
+                  ><a class="ps-next" href="#"
+                    >Next<i class="ps-icon-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ps-section__content">
+            <div
+              class="ps-owl--colection owl-slider"
+              data-owl-auto="true"
+              data-owl-loop="true"
+              data-owl-speed="5000"
+              data-owl-gap="30"
+              data-owl-nav="false"
+              data-owl-dots="false"
+              data-owl-item="4"
+              data-owl-item-xs="1"
+              data-owl-item-sm="2"
+              data-owl-item-md="3"
+              data-owl-item-lg="4"
+              data-owl-duration="1000"
+              data-owl-mousedrag="on"
+            >
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <a class="ps-shoe__favorite" href="#"
+                      ><i class="ps-icon-heart"></i></a
+                    ><img src="images/shoe/1.jpg" alt="" /><a
+                      class="ps-shoe__overlay"
+                      href="product-detail.html"
+                    ></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal">
+                        <img src="images/shoe/2.jpg" alt="" /><img
+                          src="images/shoe/3.jpg"
+                          alt=""
+                        /><img src="images/shoe/4.jpg" alt="" /><img
+                          src="images/shoe/5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail">
+                      <a class="ps-shoe__name" href="product-detai.html"
+                        >Air Jordan 7 Retro</a
+                      >
+                      <p class="ps-shoe__categories">
+                        <a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+                          href="#"
+                        >
+                          Jordan</a
+                        >
+                      </p>
+                      <span class="ps-shoe__price"> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd">
+                      <span>-35%</span>
+                    </div>
+                    <a class="ps-shoe__favorite" href="#"
+                      ><i class="ps-icon-heart"></i></a
+                    ><img src="images/shoe/2.jpg" alt="" /><a
+                      class="ps-shoe__overlay"
+                      href="product-detail.html"
+                    ></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal">
+                        <img src="images/shoe/2.jpg" alt="" /><img
+                          src="images/shoe/3.jpg"
+                          alt=""
+                        /><img src="images/shoe/4.jpg" alt="" /><img
+                          src="images/shoe/5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail">
+                      <a class="ps-shoe__name" href="product-detai.html"
+                        >Air Jordan 7 Retro</a
+                      >
+                      <p class="ps-shoe__categories">
+                        <a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+                          href="#"
+                        >
+                          Jordan</a
+                        >
+                      </p>
+                      <span class="ps-shoe__price"> <del>£220</del> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <a class="ps-shoe__favorite" href="#"
+                      ><i class="ps-icon-heart"></i></a
+                    ><img src="images/shoe/3.jpg" alt="" /><a
+                      class="ps-shoe__overlay"
+                      href="product-detail.html"
+                    ></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal">
+                        <img src="images/shoe/2.jpg" alt="" /><img
+                          src="images/shoe/3.jpg"
+                          alt=""
+                        /><img src="images/shoe/4.jpg" alt="" /><img
+                          src="images/shoe/5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail">
+                      <a class="ps-shoe__name" href="product-detai.html"
+                        >Air Jordan 7 Retro</a
+                      >
+                      <p class="ps-shoe__categories">
+                        <a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+                          href="#"
+                        >
+                          Jordan</a
+                        >
+                      </p>
+                      <span class="ps-shoe__price"> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <a class="ps-shoe__favorite" href="#"
+                      ><i class="ps-icon-heart"></i></a
+                    ><img src="images/shoe/4.jpg" alt="" /><a
+                      class="ps-shoe__overlay"
+                      href="product-detail.html"
+                    ></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal">
+                        <img src="images/shoe/2.jpg" alt="" /><img
+                          src="images/shoe/3.jpg"
+                          alt=""
+                        /><img src="images/shoe/4.jpg" alt="" /><img
+                          src="images/shoe/5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail">
+                      <a class="ps-shoe__name" href="product-detai.html"
+                        >Air Jordan 7 Retro</a
+                      >
+                      <p class="ps-shoe__categories">
+                        <a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+                          href="#"
+                        >
+                          Jordan</a
+                        >
+                      </p>
+                      <span class="ps-shoe__price"> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <div class="ps-badge"><span>New</span></div>
+                    <a class="ps-shoe__favorite" href="#"
+                      ><i class="ps-icon-heart"></i></a
+                    ><img src="images/shoe/5.jpg" alt="" /><a
+                      class="ps-shoe__overlay"
+                      href="product-detail.html"
+                    ></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal">
+                        <img src="images/shoe/2.jpg" alt="" /><img
+                          src="images/shoe/3.jpg"
+                          alt=""
+                        /><img src="images/shoe/4.jpg" alt="" /><img
+                          src="images/shoe/5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail">
+                      <a class="ps-shoe__name" href="product-detai.html"
+                        >Air Jordan 7 Retro</a
+                      >
+                      <p class="ps-shoe__categories">
+                        <a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+                          href="#"
+                        >
+                          Jordan</a
+                        >
+                      </p>
+                      <span class="ps-shoe__price"> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-shoes--carousel">
+                <div class="ps-shoe">
+                  <div class="ps-shoe__thumbnail">
+                    <a class="ps-shoe__favorite" href="#"
+                      ><i class="ps-icon-heart"></i></a
+                    ><img src="images/shoe/6.jpg" alt="" /><a
+                      class="ps-shoe__overlay"
+                      href="product-detail.html"
+                    ></a>
+                  </div>
+                  <div class="ps-shoe__content">
+                    <div class="ps-shoe__variants">
+                      <div class="ps-shoe__variant normal">
+                        <img src="images/shoe/2.jpg" alt="" /><img
+                          src="images/shoe/3.jpg"
+                          alt=""
+                        /><img src="images/shoe/4.jpg" alt="" /><img
+                          src="images/shoe/5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <select class="ps-rating ps-shoe__rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                      </select>
+                    </div>
+                    <div class="ps-shoe__detail">
+                      <a class="ps-shoe__name" href="product-detai.html"
+                        >Air Jordan 7 Retro</a
+                      >
+                      <p class="ps-shoe__categories">
+                        <a href="#">Men shoes</a>,<a href="#"> Nike</a>,<a
+                          href="#"
+                        >
+                          Jordan</a
+                        >
+                      </p>
+                      <span class="ps-shoe__price"> £ 120</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div th:replace="~{template/footer :: footer}"></div>
+    <!-- JS Library-->
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/jquery/dist/jquery.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/bootstrap/dist/js/bootstrap.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/jquery-bar-rating/dist/jquery.barrating.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/owl-carousel/owl.carousel.min.js}"
+    ></script>
+    <script type="text/javascript" th:src="@{/plugins/gmap3.min.js}"></script>
+    <script type="text/javascript" th:src="@{/plugins/imagesloaded.pkgd.js}"></script>
+    <script type="text/javascript" th:src="@{/plugins/isotope.pkgd.min.js}"></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/bootstrap-select/dist/js/bootstrap-select.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/jquery.matchHeight-min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/slick/slick/slick.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/elevatezoom/jquery.elevatezoom.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/Magnific-Popup/dist/jquery.magnific-popup.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/jquery-ui/jquery-ui.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=GB"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/jquery.themepunch.tools.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/jquery.themepunch.revolution.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/extensions/revolution.extension.video.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/extensions/revolution.extension.navigation.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/extensions/revolution.extension.parallax.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/plugins/revolution/js/extensions/revolution.extension.actions.min.js}"
+    ></script>
+    <!-- Custom scripts-->
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+  </body>
+</html>

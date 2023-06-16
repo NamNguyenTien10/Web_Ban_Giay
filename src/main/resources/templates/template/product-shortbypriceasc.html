@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="favicon.png" rel="icon" />
+<meta name="author" content="Nghia Minh Luong" />
+<meta name="keywords" content="Default Description" />
+<meta name="description" content="Default keyword" />
+<title>Sky - Product Detail</title>
+<!-- Fonts-->
+<link
+	href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	th:href="@{/plugins/font-awesome/css/font-awesome.min.css}" />
+<link rel="stylesheet" th:href="@{/plugins/ps-icon/style.css}" />
+<!-- CSS Library-->
+<link rel="stylesheet"
+	th:href="@{/plugins/bootstrap/dist/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/plugins/owl-carousel/assets/owl.carousel.css}" />
+<link rel="stylesheet"
+	th:href="@{/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css}" />
+<link rel="stylesheet" th:href="@{/plugins/slick/slick/slick.css}" />
+<link rel="stylesheet"
+	th:href="@{/plugins/bootstrap-select/dist/css/bootstrap-select.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/plugins/Magnific-Popup/dist/magnific-popup.css}" />
+<link rel="stylesheet" th:href="@{/plugins/jquery-ui/jquery-ui.min.css}" />
+<link rel="stylesheet" th:href="@{/plugins/revolution/css/settings.css}" />
+<link rel="stylesheet" th:href="@{/plugins/revolution/css/layers.css}" />
+<link rel="stylesheet"
+	th:href="@{/plugins/revolution/css/navigation.css}" />
+<!-- Custom-->
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+<!--[if lt IE 9
+      ]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script
+    ><![endif]-->
+</head>
+<!--[if IE 7]><body class="ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
+<body class="ps-loading">
+	<div class="header--sidebar"></div>
+	<div th:replace="~{template/header :: header}"></div> 
+
+	<main class="ps-main" layout:fragment="content">
+		<div class="ps-products-wrap pt-80 pb-80">
+			<div class="ps-products" data-mh="product-listing">
+				<div class="ps-product-action">
+					<div class="ps-product__filter">
+						<div class="btn-group ps-dropdown">
+								<a class="dropdown-toggle" href="#" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false">ShortBy<i
+									class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a th:href="@{/product/shortbyname}">Name</a></li>
+									<li><a th:href="@{/product/shortbypriceasc}">Price
+											(Low to High)</a></li>
+									<li><a th:href="@{/product/shortbypricedesc}">Price
+											(High to Low)</a></li>
+								</ul>
+							</div>
+					</div>
+				</div>
+
+				<!-- Product -->
+				<div class="ps-product__columns">
+					<th:block th:each="product : ${listShortByPriceASC}">
+						<div class="ps-product__column">
+							<div class="ps-shoe mb-30">
+								<div class="ps-shoe__thumbnail">
+									<div class="ps-badge">
+										<span>New</span>
+									</div>
+									<div class="ps-badge ps-badge--sale ps-badge--2nd">
+										<span>-35%</span>
+									</div>
+									<a class="ps-shoe__favorite" href="#"><i
+										class="ps-icon-heart"></i></a><img width="100px" height="150px"
+										th:src="${product.image}" /><a class="ps-shoe__overlay"
+										th:href="@{'/product/detail/' + ${product.id}}"></a>
+								</div>
+								<div class="ps-shoe__content">
+									<div class="ps-shoe__variants">
+										<select class="ps-rating ps-shoe__rating">
+											<option value="1">1</option>
+											<option value="1">2</option>
+											<option value="1">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+										</select> <span style="margin-top: 30px;"> <del
+												style="margin-right: 110px; font-size: 20px; color: red;">120
+												$</del> <span th:text="${product.price} +' $'"
+											style="font-size: 24px;"></span>
+										</span>
+									</div>
+									<div class="ps-shoe__detail">
+										<a class="ps-shoe__name" href="#" th:text=${product.name}></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th:block>
+				</div>
+
+				<div class="ps-product-action">
+					<div class="ps-pagination">
+						<ul class="pagination">
+							<th:block th:each="i: ${#numbers.sequence(1, totalPage)}">
+								<li class="page-item"><a class="page-link"
+									th:href="@{'/product/shortbypriceasc?pageNum=' + ${i}}" th:text=${i}></a></li>
+							</th:block>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="ps-sidebar" data-mh="product-listing">
+				<aside class="ps-widget--sidebar ps-widget--category">
+					<div class="ps-widget__header">
+						<h3>Category</h3>
+					</div>
+					<div class="ps-widget__content">
+						<ul class="ps-list--checked">
+							<th:block th:each="category : ${categories}">
+								<li><a
+									th:href="@{'/product/' + 'category/' + ${category.name} }"
+									th:text="${category.name}"></a></li>
+							</th:block>
+						</ul>
+					</div>
+				</aside>
+				<aside class="ps-widget--sidebar ps-widget--filter">
+					<div class="ps-widget__header">
+						<h3>Price</h3>
+					</div>
+					<div>
+						<form th:action="@{/product/price}" method="get">
+							<input type="text" name="min" th:value="${param.min}"
+								placeholder="Min Price"> <input type="text" name="max"
+								th:value="${param.max}" placeholder="Max Price">
+							<button class="ac-slider__filter ps-btn" type="submit">Filter</button>
+						</form>
+
+					</div>
+				</aside>
+				<aside class="ps-widget--sidebar ps-widget--category">
+					<div class="ps-widget__header">
+						<h3>Sky Brand</h3>
+					</div>
+					<div class="ps-widget__content">
+						<ul class="ps-list--checked">
+							<li class="current"><a href="product-listing.html">Nike(521)</a>
+							</li>
+							<li><a href="product-listing.html">Adidas(76)</a></li>
+							<li><a href="product-listing.html">Baseball(69)</a></li>
+							<li><a href="product-listing.html">Gucci(36)</a></li>
+							<li><a href="product-listing.html">Dior(108)</a></li>
+							<li><a href="product-listing.html">B&G(108)</a></li>
+							<li><a href="product-listing.html">Louis Vuiton(47)</a></li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+
+		<div th:replace="~{template/footer :: footer}"></div>
+
+
+
+	</main>
+	<!-- JS Library-->
+	<script type="text/javascript"
+		th:src="@{/plugins/jquery/dist/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/bootstrap/dist/js/bootstrap.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/jquery-bar-rating/dist/jquery.barrating.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/owl-carousel/owl.carousel.min.js}"></script>
+	<script type="text/javascript" th:src="@{/plugins/gmap3.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/imagesloaded.pkgd.js}"></script>
+	<script type="text/javascript" th:src="@{/plugins/isotope.pkgd.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/bootstrap-select/dist/js/bootstrap-select.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/jquery.matchHeight-min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/slick/slick/slick.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/elevatezoom/jquery.elevatezoom.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/Magnific-Popup/dist/jquery.magnific-popup.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/jquery-ui/jquery-ui.min.js}"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=GB"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/jquery.themepunch.tools.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/jquery.themepunch.revolution.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/extensions/revolution.extension.video.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/extensions/revolution.extension.navigation.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/extensions/revolution.extension.parallax.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugins/revolution/js/extensions/revolution.extension.actions.min.js}"></script>
+	<!-- Custom scripts-->
+	<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>
